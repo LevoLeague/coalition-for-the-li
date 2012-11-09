@@ -1,0 +1,19 @@
+{
+  "name": "nko3-coalition-for-the-li",
+  "version": "0.0.0",
+  "description": "Coalition for the Liberation of Itinerant Tree-Dwellers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nko3/coalition-for-the-li.git"
+  },
+  "dependencies": {
+  },
+  "engines": {
+    "node": "0.8.x"
+  },
+  "subdomain": "coalition-for-the-li.nko3"
+}
