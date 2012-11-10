@@ -9,7 +9,7 @@ var Renderer = module.exports = function(){
 util.inherits(Renderer, stream);
 
 Renderer.prototype.write = function(data){
-	this.emit('data',data);
+	this.emit('data',"console " +data);
 };
 
 Renderer.prototype.end = function(){
