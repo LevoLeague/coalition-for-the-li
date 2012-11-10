@@ -1,0 +1,17 @@
+{
+  "name": "sweaterclient",
+  "version": "0.0.1",
+  "description": "ERROR: No README.md file found!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "socket.io-client": "~0.9.11",
+    "optimist": "~0.3.5",
+    "charm": "~0.1.0"
+  }
+}
