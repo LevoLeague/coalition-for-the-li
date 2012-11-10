@@ -29,11 +29,7 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#if defined(ARDUINO) && ARDUINO >= 100
-#include "Arduino.h"
-#else
 #include "WProgram.h"
-#endif
 #include <inttypes.h>
 #include <avr/interrupt.h>
 #include "Charliplexing.h"
@@ -366,6 +362,7 @@ void LedSign::Set(uint8_t x, uint8_t y, uint8_t c)
  */
 void LedSign::SetBrightness(uint8_t brightness)
 {
+    Serial.print("starting ");
 
     // Wait until the previous brightness request goes through
     while( videoFlipTimer )
@@ -377,6 +374,12 @@ void LedSign::SetBrightness(uint8_t brightness)
     float brightnessPercent = ((float)brightness / 127)*((float)brightness / 127);
 
     uint8_t difference = 0;
+
+    Serial.print((int)brightness);
+    Serial.print(" ");
+
+    Serial.print((int)(brightnessPercent*100));
+    Serial.print(" ");
 
     // Compute on time for each of the pages
     for (uint8_t i = 0; i < COLORS - 1; i++) {
@@ -397,14 +400,24 @@ void LedSign::SetBrightness(uint8_t brightness)
             backTimer->prescaler[i] = fastPrescaler.TCCR2;
         }
 
+        Serial.print((int)backTimer->counts[i]);
+        Serial.print(":");
+        Serial.print((int)backTimer->prescaler[i]);
+        Serial.print(" ");
     }
 
     // Compute off time
     backTimer->counts[COLORS - 1] = 255 - difference;
     backTimer->prescaler[COLORS - 1] = slowPrescaler.TCCR2;
 
+    Serial.print((int)backTimer->counts[COLORS - 1]);
+    Serial.print(":");
+    Serial.print((int)backTimer->prescaler[COLORS - 1]);
+    Serial.print(" ");
+
     // Then update the registers
     videoFlipTimer = true;
+    Serial.print("done\n");
 }
 
 
