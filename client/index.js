@@ -1,10 +1,16 @@
 #!/usr/bin/env node
 var io = require('socket.io-client');
 var argv = require('optimist').argv;
+var stream = require('stream');
+var winston = require('winston');
+
+winston.add(winston.transports.File,{filename:'log.log'});
+winston.remove(winston.transports.Console);
+winston.info('Starting up client');
+
 var Renderer = require('./renderer');
 var TTY = require('./TTY');
 var Arduino = require('./arduino');
-var stream = require('stream');
 
 // INput
 var server = argv.server || 'http://ourproject.com/';
