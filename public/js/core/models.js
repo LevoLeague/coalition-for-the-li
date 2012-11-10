@@ -1,4 +1,4 @@
-(function(){
+(function () {
 var Passport = function () {
   this.property('authType', 'string');
   this.property('key', 'string');
@@ -10,13 +10,13 @@ Passport = geddy.model.register('Passport', Passport);
 
 }());
 
-(function(){
+(function () {
 var User = function () {
 
   this.property('username', 'string', {required: true});
   this.property('password', 'string', {required: true});
-  this.property('familyName', 'string', {required: true});
-  this.property('givenName', 'string', {required: true});
+  this.property('familyName', 'string', {required: false});
+  this.property('givenName', 'string', {required: false});
   this.property('email', 'string', {required: true});
 
   this.validatesLength('username', {min: 3});

@@ -44,7 +44,7 @@ var Users = function () {
             self.transfer('add');
           }
           else {
-            self.redirect({controller: self.name});
+           self.redirect({controller: self.name});
           }
         });
       }
