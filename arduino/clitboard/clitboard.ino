@@ -50,7 +50,7 @@ void getNewText(char* charArray) {
   /* Gets a new string from the serial port. */
   char charRead = '0';
   int charCount = 0;
-  
+
   /* If the string is sent in multiple 
       parts, get each one separately */
   while (charCount < MAX_TEXT_LENGTH && charRead != '\n' && charRead != '\0') {
@@ -73,6 +73,8 @@ void loop()                     // run over and over again
 {
   char text[MAX_TEXT_LENGTH];
   getNewText(text);
+  
+  //char text[]="MERRY CHRISTMAS";
   Serial.println(text);
   Serial.println("\n");
   
@@ -80,23 +82,20 @@ void loop()                     // run over and over again
   // text[1] = 'u';
   // text[2] = '\0'; //"fucker";
   
-  int x=0;
+  int8_t x=0,x2=0;
   for(int j=X_MAX; j>-100-X_MAX; j--) {
     x=j;
     LedSign::Clear();
     
-    // Draw each character, offset by x "pixels"
-    for(int i=0; i<100; i++) {
-      x += Font::Draw(text[i],x,0);
-      
-      // If the character is off the screen, stop.
-      if (x>=X_MAX) 
-        break;
-    }
+    for(int i=0;i<17;i++) {
+      x2=Font::Draw(text[i],x,0);
+      x+=x2;
+      if (x>=13) break;
+    }  
 
     delay(80);
   }
-  delay(3000);
+  delay(1000);
 }
 
 
