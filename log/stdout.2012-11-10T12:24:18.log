@@ -1,4 +1,4 @@
-[Sat, 10 Nov 2012 17:30:06 GMT] INFO Server starting with config: {
+[Sat, 10 Nov 2012 17:18:25 GMT] INFO Server starting with config: {
   "environment": "development",
   "workers": 1,
   "port": 4000,
@@ -34,7 +34,7 @@
     "defaultAdapter": "memory"
   },
   "passport": {
-    "successRedirect": "/message",
+    "successRedirect": "/",
     "failureRedirect": "/login",
     "twitter": {
       "consumerKey": "XXXXX",
@@ -47,7 +47,7 @@
   },
   "secret": "ZeOvvcjq8EuYOqxrUm8sL4sayEreQ5FJQGV2kavivA58aoj2pYDkH8dBP6DE89LB651t3JxbiPnpYKpmGCVLmHlE3Yz1FbRDcQZ5ELsUjZJigbLt2Ng7PKbVct2MpmzW"
 }
-[Sat, 10 Nov 2012 17:30:06 GMT] INFO Creating 1 worker process.
-[Sat, 10 Nov 2012 17:30:06 GMT] INFO Server worker running in development on port 4000 with a PID of: 37441
-[Sat, 10 Nov 2012 17:30:06 GMT] DEBUG LOGGING STARTED ============================================
-[Sat, 10 Nov 2012 17:30:06 GMT] DEBUG ============================================================
+[Sat, 10 Nov 2012 17:18:25 GMT] INFO Creating 1 worker process.
+[Sat, 10 Nov 2012 17:18:26 GMT] INFO Server worker running in development on port 4000 with a PID of: 37351
+[Sat, 10 Nov 2012 17:18:26 GMT] DEBUG LOGGING STARTED ============================================
+[Sat, 10 Nov 2012 17:18:26 GMT] DEBUG ============================================================

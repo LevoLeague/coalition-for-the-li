@@ -55,6 +55,25 @@ var Main = function () {
     });
   };
 
+  this.message = function(req, resp, params){
+     var self = this
+      , User = geddy.model.User;
+      User.first({id: this.session.get('userId')}, function (err, data) {
+      var params = {
+        user: null
+      , authType: null
+      };
+      if (data) {
+        params.user = data;
+        params.authType = authTypes[self.session.get('authType')].name;
+      }
+      self.respond(params, {
+        format: 'html'
+      , template: 'app/views/main/message'
+      });
+    });
+  };
+
 };
 
 exports.Main = Main;
