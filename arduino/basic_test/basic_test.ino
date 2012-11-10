@@ -28,9 +28,8 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include <avr/pgmspace.h>  //AVR library for writing to ROM
-#include <Charliplexing.h> //Imports the library, which needs to be
-                           //Initialized in setup.
+#include "avr/pgmspace.h"  //AVR library for writing to ROM
+#include "Charliplexing.h"
 
 //Sets the time each frame is shown (milliseconds)
 unsigned int blinkdelay = 1000 / 50;

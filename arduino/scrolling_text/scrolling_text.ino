@@ -39,7 +39,9 @@ char text[MAX_TEXT_LENGTH];
 
 void setup() {
   Serial.begin(9600);
+  Serial.println("hi");
   LedSign::Init();
+  Serial.println("done init");
   
   text[0] = '\0';
   getLength(text, &textLength, &totalPixels);
@@ -54,7 +56,7 @@ void loop() {
   int x=0;
   for(int j=X_MAX; j>-totalPixels-X_MAX; j--) {
     x=j;
-    LedSign::Clear();
+    //LedSign::Clear();
     
     // Draw each character, offset by x "pixels"
     for(int i=0; i<textLength; i++) {
