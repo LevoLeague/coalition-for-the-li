@@ -1,0 +1,53 @@
+[Sat, 10 Nov 2012 02:25:46 GMT] INFO Server starting with config: {
+  "environment": "development",
+  "workers": 1,
+  "port": 4000,
+  "spdy": null,
+  "ssl": null,
+  "debug": true,
+  "rotateWorkers": false,
+  "rotationWindow": 7200000,
+  "rotationTimeout": 300000,
+  "logDir": "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/log",
+  "gracefulShutdownTimeout": 30000,
+  "heartbeatInterval": 5000,
+  "heartbeatWindow": 20000,
+  "staticFilePath": "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/public",
+  "sessions": {
+    "store": "memory",
+    "key": "sid",
+    "expiry": 1209600
+  },
+  "cookieSessionKey": "sdata",
+  "metrics": null,
+  "i18n": {
+    "defaultLocale": "en-us",
+    "loadPaths": [
+      "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/config/locales"
+    ]
+  },
+  "hostname": "localhost",
+  "fullHostname": "http://localhost:4000",
+  "connectCompatibility": false,
+  "detailedErrors": true,
+  "model": {
+    "defaultAdapter": "memory"
+  },
+  "passport": {
+    "successRedirect": "/",
+    "failureRedirect": "/login",
+    "twitter": {
+      "consumerKey": "XXXXX",
+      "consumerSecret": "XXXXX"
+    },
+    "facebook": {
+      "clientID": "XXXXX",
+      "clientSecret": "XXXXX"
+    }
+  },
+  "secret": "RI0bU7a8xIcYMGsCxHnwo30CRVdLsnsWmuhRRfv6bfTXSmTGIn6A3zspFJyS5k2TiHBlOZo5qNjCpOTV8C3Gvuth2uqABHJ8ZTNlJmoZgBSYXBbYFkk2xnJu3BkTk9l1"
+}
+[Sat, 10 Nov 2012 02:25:46 GMT] INFO Creating 1 worker process.
+[Sat, 10 Nov 2012 02:25:47 GMT] INFO Server worker running in development on port 4000 with a PID of: 32262
+[Sat, 10 Nov 2012 02:25:47 GMT] DEBUG LOGGING STARTED ============================================
+[Sat, 10 Nov 2012 02:25:47 GMT] DEBUG ============================================================
