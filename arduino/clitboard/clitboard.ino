@@ -57,6 +57,7 @@ void getNewText(char* charArray) {
     
     while (Serial.available()) {
       charRead = char(Serial.read());
+      if(charRead == '\n' || charRead == '\0') break;
       charArray[charCount] = charRead;
       charCount++;
     }
@@ -71,16 +72,12 @@ void getNewText(char* charArray) {
  */
 void loop()                     // run over and over again
 {
-  char text[MAX_TEXT_LENGTH];
+  char text[MAX_TEXT_LENGTH] = {};
+  char out;
   getNewText(text);
-  
-  //char text[]="MERRY CHRISTMAS";
+
   Serial.println(text);
   Serial.println("\n");
-  
-  // text[0] = 'f';
-  // text[1] = 'u';
-  // text[2] = '\0'; //"fucker";
   
   int8_t x=0,x2=0;
   for(int j=X_MAX; j>-100-X_MAX; j--) {
@@ -88,14 +85,14 @@ void loop()                     // run over and over again
     LedSign::Clear();
     
     for(int i=0;i<17;i++) {
+      out = text[i];
       x2=Font::Draw(text[i],x,0);
       x+=x2;
       if (x>=13) break;
-    }  
+    }
 
     delay(80);
   }
-  delay(1000);
 }
 
 
