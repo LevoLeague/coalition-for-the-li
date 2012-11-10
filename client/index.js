@@ -42,7 +42,7 @@ var go = function(){
   if(serialPort){
   	output =  Arduino(serialPort);
   }else{
-  	output = TTY();
+  	output = new TTY();
   }
 
   var socket;
@@ -56,7 +56,5 @@ var go = function(){
   socket.pipe(renderer);
   renderer.pipe(output);
 };
-
-
 
 go();
