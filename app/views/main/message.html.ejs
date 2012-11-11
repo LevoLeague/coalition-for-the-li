@@ -13,10 +13,12 @@
     <img src="/img/elf.gif" />
     <br /><br />
 
-    <h2 class="form-heading">Write a message to our sweater</h2>
-    <input type="text" id="sweaterMessage" placeholder="Message">
-    <br>
-    <button class="btn btn-primary"  id="newMessage" type="submit">Submit</button>
+    <form class="form-message" action="">
+      <h2 class="form-heading">Write a message to our sweater</h2>
+      <input type="text" id="sweaterMessage" placeholder="Message">
+      <br>
+      <button class="btn btn-primary"  id="newMessage" type="submit">Submit</button>
+    </form>
     
     <p><a href="/logout">Click here to log back out.</a></p>
 
@@ -36,15 +38,5 @@
 
 </div>
 
-<script src="socket.io/socket.io.js"></script>
-<script>
-  var socket = io.connect("/");
- /socket.emit("my event", "Hello world");
-$(document).ready(function(){
-  $("#newMessage").click(function(){
-    var message = $("#sweaterMessage").val();
-    console.log(message);
-  });
-});
-</script>
+
 
