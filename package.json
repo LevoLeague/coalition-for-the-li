@@ -1,6 +1,6 @@
 {
   "name": "nko3-coalition-for-the-li",
-  "version": "0.0.0",
+  "version": "0.0.0-3",
   "description": "Coalition for the Liberation of Itinerant Tree-Dwellers",
   "main": "server.js",
   "scripts": {
@@ -17,10 +17,15 @@
     "passport-facebook": "*",
     "passport-twitter": "*",
     "socket.io": "0.9.x",
-    "socket.io-client": "0.9.x"
+    "socket.io-client": "0.9.x",
+    "mongodb-wrapper": "~0.4.0"
   },
   "engines": {
     "node": "0.8.x"
   },
-  "subdomain": "coalition-for-the-li.nko3"
+  "subdomain": "coalition-for-the-li.nko3",
+  "domains": [
+    "sweater.im",
+    "www.sweater.im"
+  ]
 }
