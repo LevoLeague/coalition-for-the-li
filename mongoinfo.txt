@@ -7,3 +7,6 @@ admin password sweaterclit222!
 db name sweaterpower
 db user sweater2
 db pw butUiP0NUNtFAh7yaGEa
+
+
+mongo ds039267.mongolab.com:39267/sweaterpower -u sweater2 -p butUiP0NUNtFAh7yaGEa
