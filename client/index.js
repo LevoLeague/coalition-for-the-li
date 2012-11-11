@@ -19,7 +19,10 @@ var socket2stream = function(server){
   });
   var s = new stream();
   socket.on('text', function(data){
-    s.emit('data',data);
+    winston.info('got socket.io message', {data:data});
+    if(typeof data =='string'){
+      s.emit('data',data);
+    }
   });
 
   socket.on('connect',function(){
@@ -51,7 +54,7 @@ var go = function(){
   var outputs = [];
   if(serialtarget){
     if(typeof serialtarget == 'boolean'){
-      serialtarget = '/dev/tty.usbmodem1411';
+      serialtarget = '/dev/tty.usbserial-FTE4XZRL';
     }
     winston.info('serial target ', serialtarget);
     var arduino = new Arduino(serialtarget);
@@ -77,7 +80,7 @@ var go = function(){
 
   if(server){
     if(typeof server == 'boolean'){
-      server = 'http://ourproject.com/';
+      server = 'http://arduinobridge.jit.su/';
     }
     var socket = socket2stream(server);
     inputs.push(socket);
