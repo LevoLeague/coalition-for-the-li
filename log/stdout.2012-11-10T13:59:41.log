@@ -1,0 +1,50 @@
+[Sat, 10 Nov 2012 18:58:32 GMT] INFO Server starting with config: {
+  "environment": "development",
+  "workers": 1,
+  "port": 4000,
+  "spdy": null,
+  "ssl": null,
+  "debug": true,
+  "rotateWorkers": false,
+  "rotationWindow": 7200000,
+  "rotationTimeout": 300000,
+  "logDir": "/Users/brendastorer/Development/sweater/coalition-for-the-li/log",
+  "gracefulShutdownTimeout": 30000,
+  "heartbeatInterval": 5000,
+  "heartbeatWindow": 20000,
+  "staticFilePath": "/Users/brendastorer/Development/sweater/coalition-for-the-li/public",
+  "sessions": {
+    "store": "memory",
+    "key": "sid",
+    "expiry": 1209600
+  },
+  "cookieSessionKey": "sdata",
+  "metrics": null,
+  "i18n": {
+    "defaultLocale": "en-us",
+    "loadPaths": [
+      "/Users/brendastorer/Development/sweater/coalition-for-the-li/config/locales"
+    ]
+  },
+  "hostname": "localhost",
+  "fullHostname": "http://localhost:4000",
+  "connectCompatibility": false,
+  "detailedErrors": true,
+  "model": {
+    "defaultAdapter": "memory"
+  },
+  "passport": {
+    "successRedirect": "/message",
+    "failureRedirect": "/login",
+    "twitter": {
+      "consumerKey": "XXXXX",
+      "consumerSecret": "XXXXX"
+    },
+    "facebook": {
+      "clientID": "XXXXX",
+      "clientSecret": "XXXXX"
+    }
+  },
+  "secret": "ZeOvvcjq8EuYOqxrUm8sL4sayEreQ5FJQGV2kavivA58aoj2pYDkH8dBP6DE89LB651t3JxbiPnpYKpmGCVLmHlE3Yz1FbRDcQZ5ELsUjZJigbLt2Ng7PKbVct2MpmzW"
+}
+[Sat, 10 Nov 2012 18:58:32 GMT] INFO Creating 1 worker process.
