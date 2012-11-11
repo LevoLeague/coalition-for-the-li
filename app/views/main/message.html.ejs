@@ -5,13 +5,18 @@
       Hello<% if (user.username) { %>, <%= user.username %><% } %>
     </h1>
     <p> This is the Coalition for the Liberation of Itinerant Tree-Dwellers!(via <%= authType %>).</p>
-
+    <br /><br />
+    <img src="/img/elf.gif" />
+    <br /><br />
 
 
 
     <p><a href="/logout">Click here to log back out.</a></p>
   <% } else { %>
     <h1>Hello, stranger</h1>
+    <br />
+    <img src="/img/lucy.gif" />
+    <br /><br />
     <p>Don't have access to the Coalition for the Liberation of Itinerant Tree-Dwellers!.</p>
     <p><a href="/users/add">Click here to create a user account.</a></p>
     <p><a href="/login">Click here to log in with Facebook or Twitter.</a></p>
@@ -19,4 +24,5 @@
     <p>Been here before???? <a href="/login"> Login Back In.</a></p>
 
   <% } %>
+
 </div>
