@@ -5,11 +5,35 @@
       Hello<% if (user.username) { %>, <%= user.username %><% } %>
     </h1>
     <p> This is the Coalition for the Liberation of Itinerant Tree-Dwellers!(via <%= authType %>).</p>
+    <p>Spread the Xmas Joy!!</p>
 
+    <p>
+    <form id="message-form" class="form-horizontal" action="" method="POST">
+    <fieldset>
+     <!-- <legend>Log In</legend> -->
+      <div class="control-group">
+        <label for="message" class="control-label">message</label>
+        <div class="controls">
+          <%- contentTag('input', params.username, {type:'text', class:'span6', name:'message'}) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <label for="password" class="control-label">password</label>
+        <div class="controls">
+          <%- contentTag('input', params.password, {type:'password', class:'span6', name:'password'}) %>
+        </div>
+      </div>
+      <div class="form-actions">
+        <%- contentTag('input', 'Submit', {type: 'submit', class: 'btn btn-primary'}) %>
+      </div>
+    </fieldset>
+    </form>
+  </p>
 
-
-
+    
     <p><a href="/logout">Click here to log back out.</a></p>
+
+
   <% } else { %>
     <h1>Hello, stranger</h1>
     <p>Don't have access to the Coalition for the Liberation of Itinerant Tree-Dwellers!.</p>
@@ -20,3 +44,5 @@
 
   <% } %>
 </div>
+
+
