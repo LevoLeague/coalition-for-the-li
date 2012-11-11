@@ -21,12 +21,13 @@
     <%- scriptLink('/js/jplayer/jquery.jplayer.min.js', {type: 'text/javascript'}) %>
     <%- scriptLink('/js/jplayer/jquery.jplayer.inspector.js', {type: 'text/javascript'}) %>
     <%- scriptLink('/js/jplayer/jplayer.js', {type: 'text/javascript'}) %>
-    <%- scriptLink('/js/snowfall.js', {type: 'text/javascript'}) %>
+    <%- scriptLink('/js/snowstorm.js', {type: 'text/javascript'}) %>
 
 
     <%- styleLink('/css/bootstrap.min.css', {rel:'stylesheet'}) %>
     <%- styleLink('/css/bootstrap.responsive.min.css', {rel:'stylesheet'}) %>
     <%- styleLink('/css/style.css', {rel:'stylesheet'}) %>
+    
 
     <!-- The fav and touch icons -->
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -53,6 +54,7 @@
       </div>
     </div>
     <div class="garland"></div>
+    <div id="lights"></div>
     <img src="/img/ANIstocking02C.gif" class="alien"/>
     <div class="container">
       <%- yield(); %>
