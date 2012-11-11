@@ -1,4 +1,4 @@
-[Sat, 10 Nov 2012 22:12:48 GMT] INFO Server starting with config: {
+[Sun, 11 Nov 2012 18:46:41 GMT] INFO Server starting with config: {
   "environment": "development",
   "workers": 1,
   "port": 4000,
@@ -8,11 +8,11 @@
   "rotateWorkers": false,
   "rotationWindow": 7200000,
   "rotationTimeout": 300000,
-  "logDir": "/Users/brendastorer/Development/sweater/coalition-for-the-li/log",
+  "logDir": "/Users/sarajchipps/Development/Arduino/sweater/log",
   "gracefulShutdownTimeout": 30000,
   "heartbeatInterval": 5000,
   "heartbeatWindow": 20000,
-  "staticFilePath": "/Users/brendastorer/Development/sweater/coalition-for-the-li/public",
+  "staticFilePath": "/Users/sarajchipps/Development/Arduino/sweater/public",
   "sessions": {
     "store": "memory",
     "key": "sid",
@@ -47,7 +47,5 @@
   },
   "secret": "ZeOvvcjq8EuYOqxrUm8sL4sayEreQ5FJQGV2kavivA58aoj2pYDkH8dBP6DE89LB651t3JxbiPnpYKpmGCVLmHlE3Yz1FbRDcQZ5ELsUjZJigbLt2Ng7PKbVct2MpmzW"
 }
-[Sat, 10 Nov 2012 22:12:48 GMT] INFO Creating 1 worker process.
-[Sat, 10 Nov 2012 22:12:49 GMT] INFO Server worker running in development on port 4000 with a PID of: 333
-[Sat, 10 Nov 2012 22:12:49 GMT] DEBUG LOGGING STARTED ============================================
-[Sat, 10 Nov 2012 22:12:49 GMT] DEBUG ============================================================
+[Sun, 11 Nov 2012 18:46:41 GMT] DEBUG LOGGING STARTED ============================================
+[Sun, 11 Nov 2012 18:46:41 GMT] DEBUG ============================================================
