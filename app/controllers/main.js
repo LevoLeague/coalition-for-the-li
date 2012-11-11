@@ -73,7 +73,6 @@ var Main = function () {
       });
     });
   };
-
 };
 
 exports.Main = Main;
