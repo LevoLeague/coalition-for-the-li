@@ -4,6 +4,7 @@ var argv = require('optimist').argv;
 var stream = require('stream');
 var winston = require('winston');
 
+
 winston.add(winston.transports.File,{filename:'log.log'});
 winston.remove(winston.transports.Console);
 winston.info('Starting up client');
@@ -11,12 +12,6 @@ winston.info('Starting up client');
 var Renderer = require('./renderer');
 var TTY = require('./TTY');
 var Arduino = require('./arduino');
-
-// INput
-var server = argv.server || 'http://ourproject.com/';
-var serialPort = argv.serial;
-
-var renderer = new Renderer();
 
 var socket2stream = function(server){
   var socket = io.connect(server,{
@@ -44,23 +39,77 @@ var socket2stream = function(server){
 };
 
 var go = function(){
-  var output;
-  if(serialPort){
-  	output =  Arduino(serialPort);
-  }else{
-  	output = new TTY();
+  console.log(argv);
+  // INput
+  var server = argv.server;
+  var stdin = argv.stdin;
+
+  //outPUT
+  var serialtarget = argv.serial;
+  var tty = argv.tty;
+  var stdout = argv.stdout;
+
+  var outputs = [];
+  if(serialtarget){
+    if(typeof serialtarget == 'boolean'){
+      serialtarget = '/dev/tty.usbmodem1411';
+    }
+    winston.info('serial target ', serialtarget);
+    var arduino = new Arduino(serialtarget);
+    outputs.push(arduino);
+    arduino.write("WHY!?\n",console.error);
+    console.log(arduino);
   }
 
-  var socket;
-  if(server === 'local'){
-     socket = process.stdin;
-  }else{
-    socket = socket2stream(server);
-    console.log('socket!', socket);
+  if(stdout){
+    outputs.push(process.stdout);
   }
 
-  socket.pipe(renderer);
-  renderer.pipe(output);
+  if(tty){
+    winston.info('tty out');
+    var render = new Renderer();
+    tty = new TTY();
+    render.pipe(tty);
+    outputs.push(render);
+  }
+
+  var inputs = [];
+  if(stdin){
+    inputs.push(process.stdin);
+  }
+
+  if(server){
+    if(typeof server == 'boolean'){
+      server = 'http://ourproject.com/';
+    }
+    var socket = socket2stream(server);
+    inputs.push(socket);
+  }
+
+  if(!outputs.length || !inputs.length){
+    console.error("Make sure to declare at least one input and one output");
+    help();
+    process.exit(1);
+  }
+
+  inputs.forEach(function(input){
+    outputs.forEach(function(output){
+      input.pipe(output);
+    });
+  });
+
 };
+
+function help(){
+  var txt = argv['$0'] + " [options]\n";
+  txt += "  Inputs\n";
+  txt += "    --server[=http://socket.io/server/]\n";
+  txt += "    --stdin\n";
+  txt += "  Outputs\n";
+  txt += "    --serial[=/dev/path/to/serialport]\n";
+  txt += "    --tty\n";
+
+  console.log(txt);
+}
 
 go();
