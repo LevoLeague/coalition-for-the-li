@@ -39,7 +39,6 @@ var socket2stream = function(server){
 };
 
 var go = function(){
-  console.log(argv);
   // INput
   var server = argv.server;
   var stdin = argv.stdin;
@@ -57,8 +56,6 @@ var go = function(){
     winston.info('serial target ', serialtarget);
     var arduino = new Arduino(serialtarget);
     outputs.push(arduino);
-    arduino.write("WHY!?\n",console.error);
-    console.log(arduino);
   }
 
   if(stdout){
@@ -97,7 +94,6 @@ var go = function(){
       input.pipe(output);
     });
   });
-
 };
 
 function help(){

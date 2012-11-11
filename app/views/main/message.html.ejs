@@ -5,13 +5,24 @@
       Hello<% if (user.username) { %>, <%= user.username %><% } %>
     </h1>
     <p> This is the Coalition for the Liberation of Itinerant Tree-Dwellers!(via <%= authType %>).</p>
+
+    <p>Spread the Xmas Joy!!</p>
+
+
     <br /><br />
     <img src="/img/elf.gif" />
     <br /><br />
 
-
-
+    <form class="form-message" action="">
+      <h2 class="form-heading">Write a message to our sweater</h2>
+      <input type="text" id="sweaterMessage" placeholder="Message">
+      <br>
+      <button class="btn btn-primary"  id="newMessage" type="submit">Submit</button>
+    </form>
+    
     <p><a href="/logout">Click here to log back out.</a></p>
+
+
   <% } else { %>
     <h1>Hello, stranger</h1>
     <br />
@@ -26,3 +37,10 @@
   <% } %>
 
 </div>
+
+<script src="socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect("/");
+  socket.emit("my event", "Hello world");
+</script>
+

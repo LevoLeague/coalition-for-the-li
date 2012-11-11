@@ -19,9 +19,11 @@ var Arduino = module.exports = function(target){
   this.port = serialPort;
   this.ready = false
   serialPort.on('open', function(){
-    this.ready = true;
-    this.emit('ready');
-    winston.info('Arduino ready!');
+    setTimeout(function(){
+      this.ready = true;
+      this.emit('ready');
+      winston.info('Arduino ready!');
+    }.bind(this),10000);
   }.bind(this));
 
   this.port.on('error', function(err){
@@ -38,10 +40,11 @@ Arduino.prototype.write = function(data,cb){
   }
   winston.info('SERIAL data',data);
   if(this.ready){
+    winston.log('writing sync');
     return this.port.write(data,cb);
   }
-  this.port.on('open',function(){
-    winston.log('writing shit');
+  this.on('ready',function(){
+    winston.log('writing cb');
     this.port.write(data,cb);
   }.bind(this));
 };
