@@ -1,11 +1,11 @@
-[Sun, 11 Nov 2012 21:25:53 GMT] INFO Server starting with config: {
-  "environment": "development",
-  "workers": 1,
-  "port": 4000,
+[Sun, 11 Nov 2012 23:34:44 GMT] INFO Server starting with config: {
+  "environment": "production",
+  "workers": 2,
+  "port": 3000,
   "spdy": null,
   "ssl": null,
-  "debug": true,
-  "rotateWorkers": false,
+  "debug": false,
+  "rotateWorkers": true,
   "rotationWindow": 7200000,
   "rotationTimeout": 300000,
   "logDir": "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/log",
@@ -14,7 +14,7 @@
   "heartbeatWindow": 20000,
   "staticFilePath": "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/public",
   "sessions": {
-    "store": "memory",
+    "store": "cookie",
     "key": "sid",
     "expiry": 1209600
   },
@@ -27,11 +27,20 @@
     ]
   },
   "hostname": "localhost",
-  "fullHostname": "http://localhost:4000",
+  "fullHostname": "http://localhost:3000",
   "connectCompatibility": false,
-  "detailedErrors": true,
+  "detailedErrors": false,
   "model": {
-    "defaultAdapter": "memory"
+    "defaultAdapter": "mongo"
+  },
+  "db": {
+    "mongo": {
+      "username": "sweater2",
+      "dbname": "sweaterpower",
+      "password": "butUiP0NUNtFAh7yaGEa",
+      "host": "ds039267.mongolab.com",
+      "port": 39267
+    }
   },
   "passport": {
     "successRedirect": "/message",
@@ -47,7 +56,5 @@
   },
   "secret": "ZeOvvcjq8EuYOqxrUm8sL4sayEreQ5FJQGV2kavivA58aoj2pYDkH8dBP6DE89LB651t3JxbiPnpYKpmGCVLmHlE3Yz1FbRDcQZ5ELsUjZJigbLt2Ng7PKbVct2MpmzW"
 }
-[Sun, 11 Nov 2012 21:25:53 GMT] INFO Creating 1 worker process.
-[Sun, 11 Nov 2012 21:25:54 GMT] INFO Server worker running in development on port 4000 with a PID of: 48020
-[Sun, 11 Nov 2012 21:25:54 GMT] DEBUG LOGGING STARTED ============================================
-[Sun, 11 Nov 2012 21:25:54 GMT] DEBUG ============================================================
+[Sun, 11 Nov 2012 23:34:44 GMT] INFO Creating 2 worker processes.
+[Sun, 11 Nov 2012 23:34:45 GMT] INFO Server worker running in production on port 3000 with a PID of: 49629
