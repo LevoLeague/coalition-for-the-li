@@ -1,4 +1,4 @@
-[Sun, 11 Nov 2012 18:20:02 GMT] INFO Server starting with config: {
+[Sun, 11 Nov 2012 19:01:28 GMT] INFO Server starting with config: {
   "environment": "development",
   "workers": 1,
   "port": 4000,
@@ -8,11 +8,11 @@
   "rotateWorkers": false,
   "rotationWindow": 7200000,
   "rotationTimeout": 300000,
-  "logDir": "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/log",
+  "logDir": "/Users/sarajchipps/Development/Arduino/sweater/log",
   "gracefulShutdownTimeout": 30000,
   "heartbeatInterval": 5000,
   "heartbeatWindow": 20000,
-  "staticFilePath": "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/public",
+  "staticFilePath": "/Users/sarajchipps/Development/Arduino/sweater/public",
   "sessions": {
     "store": "memory",
     "key": "sid",
@@ -23,7 +23,7 @@
   "i18n": {
     "defaultLocale": "en-us",
     "loadPaths": [
-      "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/config/locales"
+      "/Users/sarajchipps/Development/Arduino/sweater/config/locales"
     ]
   },
   "hostname": "localhost",
@@ -47,7 +47,9 @@
   },
   "secret": "ZeOvvcjq8EuYOqxrUm8sL4sayEreQ5FJQGV2kavivA58aoj2pYDkH8dBP6DE89LB651t3JxbiPnpYKpmGCVLmHlE3Yz1FbRDcQZ5ELsUjZJigbLt2Ng7PKbVct2MpmzW"
 }
-[Sun, 11 Nov 2012 18:20:02 GMT] INFO Creating 1 worker process.
-[Sun, 11 Nov 2012 18:20:03 GMT] INFO Server worker running in development on port 4000 with a PID of: 46944
-[Sun, 11 Nov 2012 18:20:03 GMT] DEBUG LOGGING STARTED ============================================
-[Sun, 11 Nov 2012 18:20:03 GMT] DEBUG ============================================================
+[Sun, 11 Nov 2012 19:01:28 GMT] INFO Creating 1 worker process.
+[Sun, 11 Nov 2012 19:01:28 GMT] INFO Server worker running in development on port 4000 with a PID of: 30142
+[Sun, 11 Nov 2012 19:01:28 GMT] DEBUG LOGGING STARTED ============================================
+[Sun, 11 Nov 2012 19:01:28 GMT] DEBUG ============================================================
+[Sun, 11 Nov 2012 19:01:58 GMT] INFO Code changed, killing 30142, cycling ...
+[Sun, 11 Nov 2012 19:01:58 GMT] INFO Creating 1 worker process.
