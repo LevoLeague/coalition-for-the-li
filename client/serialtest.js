@@ -1,7 +1,7 @@
 var serialport = require("serialport");
 var SerialPort = serialport.SerialPort;
 
-var serialtarget = '/dev/tty.usbmodem1411';
+var serialtarget = '/dev/tty.usbserial-FTE4XZRL';
 var sp = new SerialPort(serialtarget, {
   parser: serialport.parsers.readline("\n"),
   baudRate: 9600, // this is synced to what was set for the Arduino Code
@@ -26,6 +26,6 @@ function doshit(){
   console.log('doing shit');
   process.stdin.pipe(sp);
   setInterval(function(){
-    sp.write("OMFG\n",function(){console.log("writecb",arguments);});
-  },5000);
+    sp.write("FUCK YEA CHRISTMAS!!\n",function(){console.log("writecb",arguments);});
+  },10000);
 }
