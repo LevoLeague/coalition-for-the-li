@@ -43,6 +43,7 @@ void setup()                    // run once, when the sketch starts
 {
   LedSign::Init();
   Serial.begin(9600);
+  display("!");
 }
 
 
@@ -73,9 +74,11 @@ void getNewText(char* charArray) {
 void loop()                     // run over and over again
 {
   char text[MAX_TEXT_LENGTH] = {};
-  char out;
   getNewText(text);
+  display(text); 
+}
 
+void display(char* text){
   Serial.println(text);
   Serial.println("\n");
   
@@ -85,13 +88,12 @@ void loop()                     // run over and over again
     LedSign::Clear();
     
     for(int i=0;i<17;i++) {
-      out = text[i];
       x2=Font::Draw(text[i],x,0);
       x+=x2;
       if (x>=13) break;
     }
 
-    delay(80);
+    delay(75);
   }
 }
 

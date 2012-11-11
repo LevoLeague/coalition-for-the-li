@@ -12,8 +12,7 @@ input, button, select, textarea {font-family:serif;}
 .container {padding-left:150px; position:relative;}
 .garland {background:url('../img/f536h0.gif') repeat-x; height:65px; margin-top:25px;}
 @media (max-width: 979px){
-	.garland {margin-top:-25px;}
-	
+	.garland {margin-top:-25px;}	
 }
 .hero-unit {background:none;}
 .navbar-inner {background-color:#990003; background-image:none; border:none;}
@@ -83,7 +82,6 @@ input, button, select, textarea {font-family:serif;}
 .demo-container .tracklist li {margin-bottom:5px;}
 .jp-play {text-indent:-9999px; background:url('../img/play.png'); height:32px; width:32px; display:block;}
 .jp-pause {text-indent:-9999px; background:url('../img/pause.png'); height:32px; width:32px; display:block;}
-.jp-stop {text-indent:-9999px; background:url('../img/stop.png'); height:32px; width:32px; display:block;}
 .jp-mute {text-indent:-9999px; background:url('../img/mute.png'); height:32px; width:32px; display:block;}
 .jp-unmute {text-indent:-9999px; background:url('../img/sound.png'); height:32px; width:32px; display:block;}
 
