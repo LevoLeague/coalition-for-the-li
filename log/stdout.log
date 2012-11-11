@@ -1,0 +1,60 @@
+[Sun, 11 Nov 2012 23:34:44 GMT] INFO Server starting with config: {
+  "environment": "production",
+  "workers": 2,
+  "port": 3000,
+  "spdy": null,
+  "ssl": null,
+  "debug": false,
+  "rotateWorkers": true,
+  "rotationWindow": 7200000,
+  "rotationTimeout": 300000,
+  "logDir": "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/log",
+  "gracefulShutdownTimeout": 30000,
+  "heartbeatInterval": 5000,
+  "heartbeatWindow": 20000,
+  "staticFilePath": "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/public",
+  "sessions": {
+    "store": "cookie",
+    "key": "sid",
+    "expiry": 1209600
+  },
+  "cookieSessionKey": "sdata",
+  "metrics": null,
+  "i18n": {
+    "defaultLocale": "en-us",
+    "loadPaths": [
+      "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/config/locales"
+    ]
+  },
+  "hostname": "localhost",
+  "fullHostname": "http://localhost:3000",
+  "connectCompatibility": false,
+  "detailedErrors": false,
+  "model": {
+    "defaultAdapter": "mongo"
+  },
+  "db": {
+    "mongo": {
+      "username": "sweater2",
+      "dbname": "sweaterpower",
+      "password": "butUiP0NUNtFAh7yaGEa",
+      "host": "ds039267.mongolab.com",
+      "port": 39267
+    }
+  },
+  "passport": {
+    "successRedirect": "/message",
+    "failureRedirect": "/login",
+    "twitter": {
+      "consumerKey": "XXXXX",
+      "consumerSecret": "XXXXX"
+    },
+    "facebook": {
+      "clientID": "XXXXX",
+      "clientSecret": "XXXXX"
+    }
+  },
+  "secret": "ZeOvvcjq8EuYOqxrUm8sL4sayEreQ5FJQGV2kavivA58aoj2pYDkH8dBP6DE89LB651t3JxbiPnpYKpmGCVLmHlE3Yz1FbRDcQZ5ELsUjZJigbLt2Ng7PKbVct2MpmzW"
+}
+[Sun, 11 Nov 2012 23:34:44 GMT] INFO Creating 2 worker processes.
+[Sun, 11 Nov 2012 23:34:45 GMT] INFO Server worker running in production on port 3000 with a PID of: 49629

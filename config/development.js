@@ -21,8 +21,16 @@ var config = {
 , debug: true
 , hostname: 'localhost'
 , port: 4000
+, db: {
+    mongo: {
+      username:'sweater2'
+    , dbname: 'sweaterpower'
+    , password: 'butUiP0NUNtFAh7yaGEa'
+    , host: 'ds039267.mongolab.com'
+    , port: 39267
+    }}
 , model: {
-    defaultAdapter: 'memory'
+    defaultAdapter: 'mongo'
   }
 , sessions: {
     store: 'memory'

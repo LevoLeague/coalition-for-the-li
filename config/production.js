@@ -19,18 +19,17 @@
 var config = {
   detailedErrors: false
 , hostname: null
-, port: 4000
+, port: 3000
 , model: {
     defaultAdapter: 'mongo'
   }
 , db: {
     mongo: {
-      username: null
-    , dbname: 'production'
-    , prefix: null
-    , password: null
-    , host: 'localhost'
-    , port: 27017
+      username:'sweater2'
+    , dbname: 'sweaterpower'
+    , password: 'butUiP0NUNtFAh7yaGEa'
+    , host: 'ds039267.mongolab.com'
+    , port: 39267
     }
   }
 
