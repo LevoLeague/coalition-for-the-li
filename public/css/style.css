@@ -26,7 +26,7 @@ input, button, select, textarea {font-family:serif;}
 .form-actions {background-color:transparent; border:none;}
 
 /** Music Player **/
-.player-image {float:left; padding-right:5px;}
+.player-image {float:left; padding:0 5px 10px 0;}
 .demo-container {
 	width:175px;
 	background-color:#669933;
@@ -79,7 +79,7 @@ input, button, select, textarea {font-family:serif;}
 	color:#ffff33;
 }
 
-.demo-container .tracklist li {margin-bottom:5px;}
+.demo-container .tracklist li {margin-bottom:7px;}
 .jp-play {text-indent:-9999px; background:url('../img/play.png'); height:32px; width:32px; display:block;}
 .jp-pause {text-indent:-9999px; background:url('../img/pause.png'); height:32px; width:32px; display:block;}
 .jp-mute {text-indent:-9999px; background:url('../img/mute.png'); height:32px; width:32px; display:block;}
