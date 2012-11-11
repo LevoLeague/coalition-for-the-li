@@ -32,11 +32,11 @@ document.write("<LAYER NAME='sn"+i+"' LEFT=0 TOP=0><IMG SRC="+rndPic+"></LAYER>"
 }
 }
 else{
-document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+document.write('<div style="position:absolute;top:-2px;left:0px; z-index:1000000;"><div style="position:relative">');
 for (i = 0; i < Amount; i++){
 var P=Math.floor(Math.random()*grphcs.length);
 rndPic=grphcs[P];
-document.write('<img id="si'+i+'" src="'+rndPic+'" style="position:absolute;top:0px;left:0px">');
+document.write('<img id="si'+i+'" src="'+rndPic+'" style="position:absolute;top:0px;left:0px;">');
 }
 document.write('</div></div>');
 }
