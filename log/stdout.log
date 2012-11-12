@@ -1,11 +1,11 @@
-[Sun, 11 Nov 2012 23:34:44 GMT] INFO Server starting with config: {
-  "environment": "production",
-  "workers": 2,
-  "port": 3000,
+[Mon, 12 Nov 2012 00:07:27 GMT] INFO Server starting with config: {
+  "environment": "development",
+  "workers": 1,
+  "port": 4000,
   "spdy": null,
   "ssl": null,
-  "debug": false,
-  "rotateWorkers": true,
+  "debug": true,
+  "rotateWorkers": false,
   "rotationWindow": 7200000,
   "rotationTimeout": 300000,
   "logDir": "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/log",
@@ -14,7 +14,7 @@
   "heartbeatWindow": 20000,
   "staticFilePath": "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/public",
   "sessions": {
-    "store": "cookie",
+    "store": "memory",
     "key": "sid",
     "expiry": 1209600
   },
@@ -27,12 +27,9 @@
     ]
   },
   "hostname": "localhost",
-  "fullHostname": "http://localhost:3000",
+  "fullHostname": "http://localhost:4000",
   "connectCompatibility": false,
-  "detailedErrors": false,
-  "model": {
-    "defaultAdapter": "mongo"
-  },
+  "detailedErrors": true,
   "db": {
     "mongo": {
       "username": "sweater2",
@@ -41,6 +38,9 @@
       "host": "ds039267.mongolab.com",
       "port": 39267
     }
+  },
+  "model": {
+    "defaultAdapter": "mongo"
   },
   "passport": {
     "successRedirect": "/message",
@@ -56,5 +56,7 @@
   },
   "secret": "ZeOvvcjq8EuYOqxrUm8sL4sayEreQ5FJQGV2kavivA58aoj2pYDkH8dBP6DE89LB651t3JxbiPnpYKpmGCVLmHlE3Yz1FbRDcQZ5ELsUjZJigbLt2Ng7PKbVct2MpmzW"
 }
-[Sun, 11 Nov 2012 23:34:44 GMT] INFO Creating 2 worker processes.
-[Sun, 11 Nov 2012 23:34:45 GMT] INFO Server worker running in production on port 3000 with a PID of: 49629
+[Mon, 12 Nov 2012 00:07:27 GMT] INFO Creating 1 worker process.
+[Mon, 12 Nov 2012 00:07:28 GMT] INFO Server worker running in development on port 4000 with a PID of: 49984
+[Mon, 12 Nov 2012 00:07:28 GMT] DEBUG LOGGING STARTED ============================================
+[Mon, 12 Nov 2012 00:07:28 GMT] DEBUG ============================================================

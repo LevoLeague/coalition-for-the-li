@@ -21,6 +21,7 @@ var router = new geddy.RegExpRouter();
 
 router.get('/').to('Main.index');
 router.get('/message').to('Main.message');
+router.get('/winner').to('Main.winner');
 
 // Basic routes
 // router.match('/moving/pictures/:id', 'GET').to('Moving.pictures');
