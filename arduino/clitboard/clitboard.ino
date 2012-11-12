@@ -42,6 +42,7 @@ char text[MAX_TEXT_LENGTH];
 void setup()                    // run once, when the sketch starts
 {
   LedSign::Init();
+  LedSign::SetBrightness(25);
   Serial.begin(9600);
   display("!");
 }
