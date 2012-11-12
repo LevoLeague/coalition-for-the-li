@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [Mon, 12 Nov 2012 00:07:27 GMT] INFO Server starting with config: {
+=======
+[Sun, 11 Nov 2012 23:51:50 GMT] INFO Server starting with config: {
+>>>>>>> 259909d735781e947633c62747af5f84ce863f2c
   "environment": "development",
   "workers": 1,
   "port": 4000,
@@ -8,11 +12,11 @@
   "rotateWorkers": false,
   "rotationWindow": 7200000,
   "rotationTimeout": 300000,
-  "logDir": "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/log",
+  "logDir": "/Users/sarajchipps/Development/Arduino/sweater2/coalition-for-the-li/log",
   "gracefulShutdownTimeout": 30000,
   "heartbeatInterval": 5000,
   "heartbeatWindow": 20000,
-  "staticFilePath": "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/public",
+  "staticFilePath": "/Users/sarajchipps/Development/Arduino/sweater2/coalition-for-the-li/public",
   "sessions": {
     "store": "memory",
     "key": "sid",
@@ -23,7 +27,7 @@
   "i18n": {
     "defaultLocale": "en-us",
     "loadPaths": [
-      "/Users/rushainem/Library/Developer/JavaScript/hackathons/coalition-for-the-li/config/locales"
+      "/Users/sarajchipps/Development/Arduino/sweater2/coalition-for-the-li/config/locales"
     ]
   },
   "hostname": "localhost",
@@ -56,7 +60,14 @@
   },
   "secret": "ZeOvvcjq8EuYOqxrUm8sL4sayEreQ5FJQGV2kavivA58aoj2pYDkH8dBP6DE89LB651t3JxbiPnpYKpmGCVLmHlE3Yz1FbRDcQZ5ELsUjZJigbLt2Ng7PKbVct2MpmzW"
 }
+<<<<<<< HEAD
 [Mon, 12 Nov 2012 00:07:27 GMT] INFO Creating 1 worker process.
 [Mon, 12 Nov 2012 00:07:28 GMT] INFO Server worker running in development on port 4000 with a PID of: 49984
 [Mon, 12 Nov 2012 00:07:28 GMT] DEBUG LOGGING STARTED ============================================
 [Mon, 12 Nov 2012 00:07:28 GMT] DEBUG ============================================================
+=======
+[Sun, 11 Nov 2012 23:51:50 GMT] INFO Creating 1 worker process.
+[Sun, 11 Nov 2012 23:51:50 GMT] INFO Server worker running in development on port 4000 with a PID of: 32129
+[Sun, 11 Nov 2012 23:51:50 GMT] DEBUG LOGGING STARTED ============================================
+[Sun, 11 Nov 2012 23:51:50 GMT] DEBUG ============================================================
+>>>>>>> 259909d735781e947633c62747af5f84ce863f2c

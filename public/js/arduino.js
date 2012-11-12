@@ -5,9 +5,12 @@ Sweater.GetMessage = function(message){
 	}); */
 
 	$.ajax({
-		url: 'http://arduinobridge.jit.su/message/?text=awesome',
-		type: 'GET'
+		url: 'http://arduinobridge.jit.su/message/?text=' + message,
+		type: 'GET',
+    crossDomain:true
+
 	});
+  alert("Message sent!!");
 };
 
 $(document).ready(function(){

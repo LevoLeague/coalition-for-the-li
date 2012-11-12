@@ -13,10 +13,12 @@
     <img src="/img/elf.gif" />
     <br /><br />
 
-    <h2 class="form-heading">Write a message to our sweater</h2>
-    <input type="text" id="sweaterMessage" placeholder="Message">
-    <br>
-    <button class="btn btn-primary"  id="newMessage" type="submit">Submit</button>
+    <form class="form-message" action="http://arduinobridge.jit.su/message/">
+      <h2 class="form-heading">Write a message to our sweater</h2>
+      <input type="text" id="sweaterMessage" name="text" placeholder="Message">
+      <br>
+      <button class="btn btn-primary"  id="newMessage" type="submit">Submit</button>
+    </form>
     
     <p><a href="/logout">Click here to log back out.</a></p>
 
@@ -35,7 +37,3 @@
   <% } %>
 
 </div>
-
-<script type="text/javascript" src="/js/arduino.js">  
-</script>
-
